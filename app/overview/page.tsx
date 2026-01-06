@@ -102,10 +102,10 @@ export default function OverviewPage() {
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
-              window.location.href = "/#who-are-we"
+              window.location.href = "/#who-we-are"
             }}
           >
-            <span className="relative z-20">Who are we</span>
+            <span className="relative z-20">Who we are</span>
           </a>
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -184,11 +184,11 @@ export default function OverviewPage() {
           <div className="absolute top-20 left-4 right-4 bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl p-6">
             <nav className="flex flex-col space-y-4">
               <a
-                href="/#who-are-we"
+                href="/#who-we-are"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
-                Who are we
+                Who we are
               </a>
               <a
                 href="/#what-we-offer"
@@ -245,7 +245,7 @@ export default function OverviewPage() {
             >
               <h2 className="text-3xl font-semibold text-foreground mb-4">Our Mission</h2>
               <p>
-                We are dedicated to providing innovative solutions that help businesses reach their full potential. Our
+                We are dedicated to providing innovative solutions that help organizations reach their full potential. Our
                 team of experts works tirelessly to deliver exceptional services that drive growth and success.
               </p>
             </motion.section>
@@ -257,7 +257,7 @@ export default function OverviewPage() {
             >
               <h2 className="text-3xl font-semibold text-foreground mb-4">What We Do</h2>
               <p>
-                Our comprehensive suite of services is designed to meet the diverse needs of modern businesses. From
+                Our comprehensive suite of services is designed to meet the diverse needs. From
                 strategic consulting to hands-on implementation, we partner with our clients every step of the way to
                 ensure lasting results and measurable impact.
               </p>

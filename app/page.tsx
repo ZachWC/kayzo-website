@@ -47,14 +47,22 @@ export default function Home() {
   const scrollToSection = (elementId: string) => {
     const element = document.getElementById(elementId)
     if (element) {
-      const headerOffset = 120
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-      const offsetPosition = elementPosition - headerOffset
+      if (elementId === "footer") {
+        // Scroll to bottom of page for footer
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        })
+      } else {
+        const headerOffset = 120
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = elementPosition - headerOffset
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        })
+      }
     }
   }
 
@@ -79,22 +87,29 @@ export default function Home() {
           perspective: "1000px",
         }}
       >
-        <Link
-          href="/"
+        <a
           className={`z-50 flex items-center justify-center gap-2 transition-all duration-300 ${
             isScrolled ? "ml-4" : ""
           }`}
+          href="https://v0.app"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <img
-            src="/kayzo-logo-white.png"
-            alt="Kayzo"
-            className="h-8 w-auto"
-          />
-        </Link>
+          <svg
+            fill="currentColor"
+            viewBox="0 0 147 70"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            className="text-foreground rounded-full size-8 w-8"
+          >
+            <path d="M56 50.2031V14H70V60.1562C70 65.5928 65.5928 70 60.1562 70C57.5605 70 54.9982 68.9992 53.1562 67.1573L0 14H19.7969L56 50.2031Z"></path>
+            <path d="M147 56H133V23.9531L100.953 56H133V70H96.6875C85.8144 70 77 61.1856 77 50.3125V14H91V46.1562L123.156 14H91V0H127.312C138.186 0 147 8.81439 147 19.6875V56Z"></path>
+          </svg>
+        </a>
 
-        <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
+        <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2 pointer-events-none">
           <a
-            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer pointer-events-auto"
             onClick={(e) => {
               e.preventDefault()
               scrollToSection("who-are-we")
@@ -103,7 +118,7 @@ export default function Home() {
             <span className="relative z-20">Who are we</span>
           </a>
           <a
-            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer pointer-events-auto"
             onClick={(e) => {
               e.preventDefault()
               scrollToSection("what-we-offer")
@@ -113,13 +128,13 @@ export default function Home() {
           </a>
           <Link
             href="/overview"
-            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer pointer-events-auto"
           >
             <span className="relative z-20">Overview</span>
           </Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 pointer-events-auto relative z-50">
           <button
             onClick={() => scrollToSection("footer")}
             className="font-medium transition-colors hover:text-foreground text-muted-foreground cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-background/50"
@@ -139,16 +154,23 @@ export default function Home() {
       </header>
 
       <header className="sticky top-4 z-[9999] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-background/80 backdrop-blur-sm border border-border/50 shadow-lg md:hidden px-4 py-3">
-        <Link
-          href="/"
+        <a
           className="flex items-center justify-center gap-2"
+          href="https://v0.app"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <img
-            src="/kayzo-logo-white.png"
-            alt="Kayzo"
-            className="h-7 w-auto"
-          />
-        </Link>
+          <svg
+            fill="currentColor"
+            viewBox="0 0 147 70"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            className="text-foreground rounded-full size-7 w-7"
+          >
+            <path d="M56 50.2031V14H70V60.1562C70 65.5928 65.5928 70 60.1562 70C57.5605 70 54.9982 68.9992 53.1562 67.1573L0 14H19.7969L56 50.2031Z"></path>
+            <path d="M147 56H133V23.9531L100.953 56H133V70H96.6875C85.8144 70 77 61.1856 77 50.3125V14H91V46.1562L123.156 14H91V0H127.312C138.186 0 147 8.81439 147 19.6875V56Z"></path>
+          </svg>
+        </a>
 
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -196,7 +218,7 @@ export default function Home() {
               <div className="border-t border-border/50 pt-4 mt-4 flex flex-row items-center justify-center gap-4">
                 <button
                   onClick={() => handleMobileNavClick("footer")}
-                  className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50 cursor-pointer inline-flex items-center justify-center gap-2"
+                  className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50 cursor-pointer inline-flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call</span>

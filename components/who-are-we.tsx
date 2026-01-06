@@ -13,7 +13,7 @@ export default function WhoAreWe() {
     {
       name: "Kaden Christensen, CEO",
       image: "/IMG_2216.jpeg",
-      bio: "Business-focused leader responsible for setting company direction, aligning strategy with execution, and guiding long-term growth. Emphasizes clear decision-making, disciplined focus, and building a sustainable organization.",
+      bio: "Leader driven by vision, execution, and building from the ground up, with a strong emphasis on strategic thinking and rapid iteration. Specializes in aligning product direction with real market needs, making clear decisions under uncertainty, and fostering a focused, resilient team culture.",
     },
     {
       name: "Zach Christensen, CTO",
@@ -28,7 +28,7 @@ export default function WhoAreWe() {
   ]
 
   return (
-    <section id="who-are-we" className="text-foreground relative overflow-hidden py-12 sm:py-24 md:py-32">
+    <section id="who-we-are" className="text-foreground relative overflow-hidden py-12 sm:py-24 md:py-32">
       <div className="bg-primary absolute -top-10 left-1/2 h-16 w-44 -translate-x-1/2 rounded-full opacity-40 blur-3xl select-none"></div>
       <div className="via-primary/50 absolute top-0 left-1/2 h-px w-3/5 -translate-x-1/2 bg-gradient-to-r from-transparent to-transparent transition-all ease-in-out"></div>
 
@@ -46,7 +46,7 @@ export default function WhoAreWe() {
             geist.className,
           )}
         >
-          Who are we
+          Who we are
         </h2>
 
         {/* Company Description */}
@@ -57,9 +57,7 @@ export default function WhoAreWe() {
           className="mx-auto max-w-4xl mb-16 text-center"
         >
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Add your company description here. Tell your story, share your mission, and explain what makes your company
-            unique. This is your opportunity to connect with your audience and communicate your values and vision.
-            Replace this text with a compelling narrative about your company's journey and purpose.
+            We are a team united by a shared vision: to build dependable, secure technology that supports critical work. Each member brings a focus on quality, accountability, and real-world results.
           </p>
         </motion.div>
 
