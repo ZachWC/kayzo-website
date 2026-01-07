@@ -56,11 +56,11 @@ export function StickyFooter() {
                   <span>kayzocontracts@gmail.com</span>
                 </a>
                 <a
-                  href="tel:+12087897651"
+                  href="tel:+12089069574"
                   className="flex items-center gap-2 hover:underline cursor-pointer transition-all hover:scale-105 text-[#e78a53]"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>(208) 789-7651</span>
+                  <span>(208) 906-9574</span>
                 </a>
               </div>
             </motion.div>
