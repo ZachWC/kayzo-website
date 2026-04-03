@@ -11,19 +11,14 @@ export default function WhoAreWe() {
 
   const founders = [
     {
-      name: "Kaden Christensen, CEO",
-      image: "/IMG_2216.jpeg",
-      bio: "Leader driven by vision, execution, and building from the ground up, with a strong emphasis on strategic thinking and rapid iteration. Specializes in aligning product direction with real market needs, making clear decisions under uncertainty, and fostering a focused, resilient team culture.",
+      name: "Tyler Delarosa, CEO",
+      image: "/IMG_2905.png",
+      bio: "Former Air Force project manager with experience in government contracting and healthcare operations. Focused on helping Kayzo turn AI into a reliable copilot for electrical contractors and lead product decisions around real operator pain points.",
     },
     {
       name: "Zach Christensen, CTO",
       image: "/zach2.jpeg",
-      bio: "Software engineer with over four years of hands-on experience in artificial intelligence and cybersecurity, focused on building secure, scalable systems that solve real world problems in high stakes environments. Specializes in practical, security first solutions that prioritize reliability, efficiency, and long term maintainability.",
-    },
-    {
-      name: "Tyler Delarosa, COO",
-      image: "/IMG_2905.png",
-      bio: "Former Air Force project manager with experience in government contracting and healthcare operations. MBA-trained, focused on practical AI automation that improves efficiency without increasing risk.",
+      bio: "Software engineer with deep experience in artificial intelligence and cybersecurity, focused on building secure, dependable systems that electricians can trust in the field. Leads the architecture behind Kayzo's product, integrations, and long-term technical direction.",
     },
   ]
 
@@ -57,12 +52,13 @@ export default function WhoAreWe() {
           className="mx-auto max-w-4xl mb-16 text-center"
         >
           <p className="text-muted-foreground text-lg leading-relaxed">
-            We are a team united by a shared vision: to build dependable, secure technology that supports critical work. Each member brings a focus on quality, accountability, and real-world results.
+            We are building Kayzo alongside the trades, with a focus on dependable AI that electricians can actually use on
+            the job for step-by-step help, better troubleshooting, and faster apprentice training.
           </p>
         </motion.div>
 
         {/* Founders Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto md:grid-cols-2">
           {founders.map((founder, index) => (
             <motion.div
               key={index}
@@ -79,8 +75,7 @@ export default function WhoAreWe() {
                     alt={founder.name}
                     className={cn(
                       "w-full h-full object-cover",
-                      index === 0 && "scale-150 object-[center_40%]",
-                      index === 2 && "object-[center_30%]",
+                      index === 0 && "object-[center_30%]",
                       index === 1 && "scale-[1.75] object-[center_45%]"
                     )}
                   />

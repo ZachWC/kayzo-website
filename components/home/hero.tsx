@@ -20,7 +20,17 @@ export default function Hero() {
       <section className="relative overflow-hidden min-h-screen flex flex-col">
         <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
-            {/* Main Heading */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
+            >
+              <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
+                Built for electricians in the field and the people training them
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -28,18 +38,22 @@ export default function Hero() {
               className="mb-8"
             >
               <h1 id="main-title" className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-                Practical Solutions. Fewer Bottlenecks.
+                AI Copilot For
+                <span className="block bg-gradient-to-r from-white via-[#f1b66d] to-[#e78a53] bg-clip-text text-transparent">
+                  Electricians
+                </span>
               </h1>
             </motion.div>
 
-            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
+              className="mx-auto mb-12 max-w-3xl text-lg text-muted-foreground"
             >
-              Kayzo LLC delivers AI-powered automation solutions that streamline government processes, improve data accuracy, and reduce administrative workload.
+              Kayzo is building practical AI for electrical contractors so crews can move faster on takeoffs, documentation,
+              troubleshooting, and apprentice training. Electricians can take a picture or record what they are working on
+              and get useful, step-by-step help right on the job.
             </motion.p>
 
             <motion.div
@@ -48,7 +62,18 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col items-center gap-6"
             >
-              {/* Decorative Elements */}
+              <div className="grid w-full max-w-3xl gap-4 text-left text-sm text-white/70 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                  Take a photo of the work and get step-by-step guidance for what to do next.
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                  Record what is happening on the job and get useful answers without stopping the crew.
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+                  Train apprentices faster with an AI copilot that explains the work as they learn.
+                </div>
+              </div>
+
               <svg
                 width="100"
                 height="50"
@@ -64,8 +89,14 @@ export default function Hero() {
                 <path d="M30.5625 27.3357C29.9525 30.7343 29.3425 34.133 28.704 37.5284C29.1225 37.4018 29.5411 37.2751 29.9882 37.1516C28.6034 35.0617 27.2504 32.9465 25.8655 30.8565C25.6406 30.5425 25.1523 30.517 24.8669 30.7451C24.5497 30.9987 24.5305 31.4299 24.7555 31.7439C26.1403 33.8338 27.4933 35.9491 28.8781 38.039C29.2489 38.6003 30.0417 38.2265 30.1624 37.6621C30.7724 34.2635 31.3824 30.8648 32.0209 27.4694C32.0908 27.1016 31.758 26.7178 31.3871 26.6765C30.9559 26.6573 30.6324 26.9679 30.5625 27.3357Z"></path>
               </svg>
 
-              {/* More info button */}
-              <div className="flex items-center justify-center">
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
+                  href="#contact"
+                  className="inline-flex h-[60px] items-center justify-center rounded-full border border-[#e78a53]/30 bg-gradient-to-r from-[#e78a53] to-[#f1b66d] px-8 text-base font-semibold text-black shadow-lg transition duration-200 hover:-translate-y-0.5"
+                >
+                  Join the Waitlist
+                </a>
+
                 <Link href="/overview">
                   <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
                     <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
@@ -86,7 +117,7 @@ export default function Hero() {
                           <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                           <path d="M2 12h20"></path>
                         </svg>
-                        More info
+                        Learn more
                       </p>
                     </div>
                     <div className="text-muted-foreground group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-border">

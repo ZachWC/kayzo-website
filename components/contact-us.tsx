@@ -8,8 +8,9 @@ import { Send } from "lucide-react"
 export function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
+    companyName: "",
     email: "",
-    message: "",
+    phone: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
@@ -31,18 +32,16 @@ export function ContactUs() {
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message')
+        throw new Error(data.error || 'Failed to join waitlist')
       }
 
       setSubmitStatus("success")
-      setFormData({ name: "", email: "", message: "" })
+      setFormData({ name: "", companyName: "", email: "", phone: "" })
 
-      // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus("idle"), 5000)
     } catch (error) {
       console.error('Error submitting form:', error)
       setSubmitStatus("error")
-      // Reset error message after 5 seconds
       setTimeout(() => setSubmitStatus("idle"), 5000)
     } finally {
       setIsSubmitting(false)
@@ -77,86 +76,116 @@ export function ContactUs() {
           />
 
           <div className="relative z-10">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h2>
-              <p className="text-white/70 text-lg">We'd love to hear from you. Send us a message!</p>
+            <div className="mb-8 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white/80">
+                Early Access
+              </div>
+              <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Join the electrician AI waitlist</h2>
+              <p className="mx-auto max-w-2xl text-lg text-white/70">
+                Tell us who you are and we&apos;ll reach out as Kayzo opens access to its AI copilot for electricians, built for jobsite help, step-by-step support, and easier apprentice training.
+              </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="block text-white font-medium text-sm">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-                  placeholder="Your name"
-                />
+            <form onSubmit={handleSubmit} className="mx-auto max-w-2xl space-y-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-white">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white transition-all placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="companyName" className="block text-sm font-medium text-white">
+                    Company name
+                  </label>
+                  <input
+                    type="text"
+                    id="companyName"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white transition-all placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="Your company"
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="email" className="block text-white font-medium text-sm">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-                  placeholder="your.email@example.com"
-                />
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-white">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white transition-all placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="you@company.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-white">
+                    Phone number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white transition-all placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="(555) 555-5555"
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="message" className="block text-white font-medium text-sm">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
-                  placeholder="Tell us what's on your mind..."
-                />
+              <div className="rounded-2xl border border-white/15 bg-black/20 p-4 text-sm text-white/70">
+                We&apos;re currently talking with electrical shops that want AI workers can use in the field by taking photos,
+                recording what they see, and getting useful guidance back in the moment. Joining the waitlist lets us reach out when spots open.
               </div>
 
               {submitStatus === "success" && (
-                <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-white text-center">
-                  Thank you! Your message has been sent successfully.
+                <div className="rounded-lg border border-green-500/30 bg-green-500/20 p-4 text-center text-white">
+                  You&apos;re on the waitlist. We&apos;ll be in touch soon.
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="p-4 rounded-lg bg-red-500/20 border border-red-500/30 text-white text-center">
-                  Something went wrong. Please try again or contact us directly.
+                <div className="rounded-lg border border-red-500/30 bg-red-500/20 p-4 text-center text-white">
+                  Something went wrong. Please try again or reach out to us directly.
                 </div>
               )}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 px-6 rounded-lg bg-white text-primary font-bold text-lg hover:bg-white/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-white px-6 py-4 text-lg font-bold text-primary shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-primary/20 border-t-primary rounded-full animate-spin" />
-                    Sending...
+                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-primary/20 border-t-primary" />
+                    Joining waitlist...
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
-                    Send Message
+                    <Send className="h-5 w-5" />
+                    Join Waitlist
                   </>
                 )}
               </button>

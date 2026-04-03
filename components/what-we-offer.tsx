@@ -6,33 +6,33 @@ import { Sparkles, Cpu, FileCheck, Briefcase, MessageSquare, Shield, BarChart } 
 const services = [
   {
     icon: Cpu,
-    title: "AI/ Engineering",
-    description: "Advanced AI-powered engineering solutions that automate processes and enhance system capabilities.",
+    title: "Jobsite AI Copilot",
+    description: "A practical AI assistant electricians can actually use while working, with answers shaped around real installs, troubleshooting, and field decisions.",
   },
   {
     icon: FileCheck,
-    title: "Auditing",
-    description: "Comprehensive auditing services to ensure compliance, accuracy, and operational excellence.",
+    title: "Photo-Based Help",
+    description: "Electricians can take a picture of what they are working on and get clear step-by-step guidance instead of guessing or waiting on a callback.",
   },
   {
     icon: Briefcase,
-    title: "Business Solutions",
-    description: "Tailored business solutions designed to streamline operations and drive organizational growth.",
+    title: "Voice Notes to Answers",
+    description: "Record what is happening in the field and turn it into usable context, faster troubleshooting, and better next steps.",
   },
   {
     icon: MessageSquare,
-    title: "Consulting",
-    description: "Expert consulting services to guide strategic decisions and optimize your business processes.",
+    title: "Step-By-Step Guidance",
+    description: "Give crews practical support in the moment, breaking complex work into actionable steps they can follow on the job.",
   },
   {
     icon: Shield,
-    title: "Cyber",
-    description: "Robust cybersecurity solutions to protect your digital assets and ensure data integrity.",
+    title: "Apprentice Training Support",
+    description: "Help apprentices learn faster with an AI teammate that explains the why behind the work while reinforcing good habits.",
   },
   {
     icon: BarChart,
-    title: "Data Analysis and Management",
-    description: "Comprehensive data analysis and management services to unlock insights and improve decision-making.",
+    title: "Usable in the Real World",
+    description: "Designed to be genuinely helpful to electricians in the field, not just another generic chatbot that sounds smart but slows the work down.",
   },
 ]
 
@@ -66,7 +66,7 @@ export function WhatWeOffer() {
           </h2>
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Comprehensive solutions tailored to meet your business needs and drive growth.
+            AI built to be useful on the job for electricians who need fast, practical help and better training in real working conditions.
           </p>
         </motion.div>
 
