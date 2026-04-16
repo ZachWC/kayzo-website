@@ -1,38 +1,44 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sparkles, Cpu, FileCheck, Briefcase, MessageSquare, Shield, BarChart } from "lucide-react"
+import { Sparkles, Cloud, MessageSquare, Plug, Building2, Users, Package } from "lucide-react"
 
 const services = [
   {
-    icon: Cpu,
-    title: "Jobsite AI Copilot",
-    description: "A practical AI assistant electricians can actually use while working, with answers shaped around real installs, troubleshooting, and field decisions.",
-  },
-  {
-    icon: FileCheck,
-    title: "Photo-Based Help",
-    description: "Electricians can take a picture of what they are working on and get clear step-by-step guidance instead of guessing or waiting on a callback.",
-  },
-  {
-    icon: Briefcase,
-    title: "Voice Notes to Answers",
-    description: "Record what is happening in the field and turn it into usable context, faster troubleshooting, and better next steps.",
+    icon: Cloud,
+    title: "Built for the cloud",
+    description:
+      "A hosted platform your team can reach from the trailer or the office—no wrestling with installs on a single machine.",
   },
   {
     icon: MessageSquare,
-    title: "Step-By-Step Guidance",
-    description: "Give crews practical support in the moment, breaking complex work into actionable steps they can follow on the job.",
+    title: "Chat-first web app",
+    description:
+      "Interact with Kayzo the way you already talk through work: natural conversation in the browser, tuned to construction workflows.",
   },
   {
-    icon: Shield,
-    title: "Apprentice Training Support",
-    description: "Help apprentices learn faster with an AI teammate that explains the why behind the work while reinforcing good habits.",
+    icon: Plug,
+    title: "Supplier integrations",
+    description:
+      "Built-in connections to Lowe's, Home Depot, and more—so answers tie back to real catalogs, SKUs, and sourcing—not generic web fluff.",
   },
   {
-    icon: BarChart,
-    title: "Usable in the Real World",
-    description: "Designed to be genuinely helpful to electricians in the field, not just another generic chatbot that sounds smart but slows the work down.",
+    icon: Building2,
+    title: "For builders & GCs",
+    description:
+      "Purpose-built for general contractors and builders coordinating trades, schedules, materials, and job-site reality.",
+  },
+  {
+    icon: Package,
+    title: "Procurement-aware help",
+    description:
+      "Bring purchasing and material questions into the same thread as planning and coordination, with integrations doing the heavy lifting.",
+  },
+  {
+    icon: Users,
+    title: "Aligned teams",
+    description:
+      "Keep estimators, supers, and field leads on the same page with one system of engagement instead of scattered threads and spreadsheets.",
   },
 ]
 
@@ -66,7 +72,7 @@ export function WhatWeOffer() {
           </h2>
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            AI built to be useful on the job for electricians who need fast, practical help and better training in real working conditions.
+            A conversational layer on top of the tools builders already need—cloud-hosted, integration-backed, and meant for how jobs actually run.
           </p>
         </motion.div>
 

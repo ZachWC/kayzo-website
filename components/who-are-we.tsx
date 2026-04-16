@@ -11,14 +11,14 @@ export default function WhoAreWe() {
 
   const founders = [
     {
-      name: "Tyler Delarosa, CEO",
-      image: "/IMG_2905.png",
-      bio: "Former Air Force project manager with experience in government contracting and healthcare operations. Focused on helping Kayzo turn AI into a reliable copilot for electrical contractors and lead product decisions around real operator pain points.",
+      name: "Zach Christensen, CEO",
+      image: "/zach2.jpeg",
+      bio: "Software engineer with deep experience in artificial intelligence and cybersecurity. Sets Kayzo's direction: a secure, cloud-native assistant for builders and general contractors—with chat at the center and real integrations to suppliers and job workflows.",
     },
     {
-      name: "Zach Christensen, CTO",
-      image: "/zach2.jpeg",
-      bio: "Software engineer with deep experience in artificial intelligence and cybersecurity, focused on building secure, dependable systems that electricians can trust in the field. Leads the architecture behind Kayzo's product, integrations, and long-term technical direction.",
+      name: "Tyler Delarosa, COO",
+      image: "/IMG_2905.png",
+      bio: "Former Air Force project manager with experience in government contracting and healthcare operations. Runs day-to-day operations and keeps Kayzo focused on operator pain points in the field—from procurement to coordination on real projects.",
     },
   ]
 
@@ -52,8 +52,9 @@ export default function WhoAreWe() {
           className="mx-auto max-w-4xl mb-16 text-center"
         >
           <p className="text-muted-foreground text-lg leading-relaxed">
-            We are building Kayzo alongside the trades, with a focus on dependable AI that electricians can actually use on
-            the job for step-by-step help, better troubleshooting, and faster apprentice training.
+            We are building Kayzo with people who run job sites and back offices every day: a cloud platform where builders and
+            general contractors steer work through chat, backed by integrations to suppliers like Lowe&apos;s and Home Depot so
+            the answers match how you actually buy and build.
           </p>
         </motion.div>
 
@@ -75,8 +76,8 @@ export default function WhoAreWe() {
                     alt={founder.name}
                     className={cn(
                       "w-full h-full object-cover",
-                      index === 0 && "object-[center_30%]",
-                      index === 1 && "scale-[1.75] object-[center_45%]"
+                      index === 0 && "scale-[1.75] object-[center_45%]",
+                      index === 1 && "object-[center_30%]"
                     )}
                   />
                 </div>

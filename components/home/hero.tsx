@@ -27,7 +27,7 @@ export default function Hero() {
               className="mb-6"
             >
               <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-                Built for electricians in the field and the people training them
+                Cloud software for builders, GCs, and the crews who deliver the work
               </div>
             </motion.div>
 
@@ -38,9 +38,9 @@ export default function Hero() {
               className="mb-8"
             >
               <h1 id="main-title" className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-                AI Copilot For
+                Intelligent assistant for
                 <span className="block bg-gradient-to-r from-white via-[#f1b66d] to-[#e78a53] bg-clip-text text-transparent">
-                  Electricians
+                  builders &amp; contractors
                 </span>
               </h1>
             </motion.div>
@@ -51,9 +51,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mx-auto mb-12 max-w-3xl text-lg text-muted-foreground"
             >
-              Kayzo is building practical AI for electrical contractors so crews can move faster on takeoffs, documentation,
-              troubleshooting, and apprentice training. Electricians can take a picture or record what they are working on
-              and get useful, step-by-step help right on the job.
+              Kayzo is building a cloud-native assistant built for builders and general contractors: a web app you steer
+              through chat, wired to the systems and suppliers you already use. We are integrating with Lowe&apos;s, Home
+              Depot, and more so your team gets real product and procurement context without jumping between tabs.
             </motion.p>
 
             <motion.div
@@ -64,13 +64,13 @@ export default function Hero() {
             >
               <div className="grid w-full max-w-3xl gap-4 text-left text-sm text-white/70 sm:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  Take a photo of the work and get step-by-step guidance for what to do next.
+                  Run estimates, orders, and job questions through a single conversational web experience.
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  Record what is happening on the job and get useful answers without stopping the crew.
+                  Pull in live context from major suppliers so decisions map to real materials and availability.
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  Train apprentices faster with an AI copilot that explains the work as they learn.
+                  Stay aligned from the office to the jobsite with software that lives in the cloud, not on one machine.
                 </div>
               </div>
 

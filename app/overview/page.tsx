@@ -243,10 +243,11 @@ export default function OverviewPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-3xl font-semibold text-foreground mb-4">Our Mission</h2>
+              <h2 className="text-3xl font-semibold text-foreground mb-4">Our mission</h2>
               <p>
-                We are dedicated to providing innovative solutions that help organizations reach their full potential. Our
-                team of experts works tirelessly to deliver exceptional services that drive growth and success.
+                Kayzo exists to give builders and general contractors a better way to run work: a cloud-native assistant you
+                steer through chat, with integrations into the suppliers and systems that matter on real jobs—not a generic
+                chatbot bolted onto yesterday&apos;s tools.
               </p>
             </motion.section>
 
@@ -255,11 +256,11 @@ export default function OverviewPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h2 className="text-3xl font-semibold text-foreground mb-4">What We Do</h2>
+              <h2 className="text-3xl font-semibold text-foreground mb-4">What we&apos;re building</h2>
               <p>
-                Our comprehensive suite of services is designed to meet the diverse needs. From
-                strategic consulting to hands-on implementation, we partner with our clients every step of the way to
-                ensure lasting results and measurable impact.
+                A web application built around conversation: ask for takeoffs, material checks, coordination help, and
+                procurement context in one thread. We are connecting Lowe&apos;s, Home Depot, and additional partners so
+                answers reflect actual products and sourcing—not disconnected advice from the open internet.
               </p>
             </motion.section>
 
@@ -268,13 +269,13 @@ export default function OverviewPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h2 className="text-3xl font-semibold text-foreground mb-4">Our Values</h2>
+              <h2 className="text-3xl font-semibold text-foreground mb-4">How we work</h2>
               <ul className="space-y-3 list-disc list-inside">
-                <li>Innovation and creativity in everything we do</li>
-                <li>Commitment to excellence and quality</li>
-                <li>Building lasting partnerships with our clients</li>
-                <li>Continuous learning and improvement</li>
-                <li>Transparency and integrity in all our dealings</li>
+                <li>Ship software that fits how crews and offices actually coordinate a job</li>
+                <li>Prefer integrations and grounded answers over hand-wavy AI demos</li>
+                <li>Stay close to builders and GCs as we expand connectors and workflows</li>
+                <li>Keep security and reliability central—this is operational infrastructure</li>
+                <li>Be direct about what is live today and what is on the roadmap</li>
               </ul>
             </motion.section>
 
@@ -283,11 +284,11 @@ export default function OverviewPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <h2 className="text-3xl font-semibold text-foreground mb-4">Looking Forward</h2>
+              <h2 className="text-3xl font-semibold text-foreground mb-4">Looking ahead</h2>
               <p>
-                As we continue to grow and evolve, our focus remains on delivering exceptional value to our clients and
-                pushing the boundaries of what's possible. We're excited about the future and the opportunities it
-                brings to make a meaningful impact in the industries we serve.
+                We are expanding integrations, hardening the platform for production job sites, and onboarding teams who want
+                a single conversational hub for construction operations. If that sounds like your shop, get in touch from the
+                home page—we&apos;d love to hear what you&apos;re solving.
               </p>
             </motion.section>
           </div>

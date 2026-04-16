@@ -4,8 +4,9 @@ import { GeistSans, GeistMono } from "geist/font"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Kayzo | AI Copilot For Electricians",
-  description: "Kayzo is building practical AI for electricians, helping contractors move faster on estimating, documentation, and operations.",
+  title: "Kayzo | AI for Builders & General Contractors",
+  description:
+    "Kayzo is a cloud platform that lets builders and general contractors run their work through a conversational web app, with integrations to suppliers like Lowe's and Home Depot.",
 }
 
 export default function RootLayout({

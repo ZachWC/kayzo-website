@@ -80,9 +80,10 @@ export function ContactUs() {
               <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white/80">
                 Early Access
               </div>
-              <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Join the electrician AI waitlist</h2>
+              <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Join the builder &amp; GC waitlist</h2>
               <p className="mx-auto max-w-2xl text-lg text-white/70">
-                Tell us who you are and we&apos;ll reach out as Kayzo opens access to its AI copilot for electricians, built for jobsite help, step-by-step support, and easier apprentice training.
+                Tell us who you are and we&apos;ll reach out as Kayzo opens access to its cloud assistant for builders and
+                general contractors—chat in the web app, supplier integrations, and workflows tuned to how you run jobs.
               </p>
             </div>
 
@@ -156,8 +157,9 @@ export function ContactUs() {
               </div>
 
               <div className="rounded-2xl border border-white/15 bg-black/20 p-4 text-sm text-white/70">
-                We&apos;re currently talking with electrical shops that want AI workers can use in the field by taking photos,
-                recording what they see, and getting useful guidance back in the moment. Joining the waitlist lets us reach out when spots open.
+                We&apos;re talking with builders and GCs who want one conversational place to coordinate work—with hooks into
+                Lowe&apos;s, Home Depot, and more—instead of bouncing between portals and spreadsheets. Joining the waitlist
+                lets us reach out when spots open.
               </div>
 
               {submitStatus === "success" && (
